@@ -13,14 +13,14 @@ let num6 = 2.7;
 let num7= 16;
 let  boo1=true;
 let boo2= false;
-console.log(str1, str2, str3, str4, num1, num2, num3, num4, num5, num6, num7, boo1, boo2)
+console.log(str1, str2, str3, str4, num1, num2, num3, num4, num5, num6, num7, boo1, boo2);
 // - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
 let firstName = 'Iryna';
 let middleName = 'Grygorivna';
 let lastName = 'Donets';
 // ----------------------------------------------------------за допомогою інтерполяції--------------------------------------------
 // змінна носить одне й те саме ім'я, оскільки повинна використовуватися лише одна варіація коду
-// let person = `${firstName} ${middleName} ${lastName}`
+// let person = `${firstName} ${middleName} ${lastName}`;
 // ----------------------------------------------------------за допомогою контакенації--------------------------------------------
 let person = firstName + " " + middleName + " " + lastName;
 // ------------------------------------------------------------------або----------------------------------------------------------
