@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+#wrapper{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.card{
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid cornflowerblue;
+    border-radius: 15px;
+    background-color: lightskyblue;
+    width: 25%;
+}
+.card:hover{
+    background-color: greenyellow;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+button{
+    background-color: darkblue;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+}
+button:hover{
+    color: black;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background: #87cefa;
+    background: linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
+    background: -webkit-linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
+    background: -moz-linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
+}

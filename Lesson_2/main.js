@@ -241,7 +241,7 @@ let coursesAndDurationArray = [
     {title: 'Python Complex', monthDuration: 6},
     {title: 'QA Complex', monthDuration: 4},
     {title: 'FullStack', monthDuration: 7},
-    {title: 'Frontend', monthDuration: 4}
+    {title: 'Frontend', monthDuration: 4},
 ]
 // ----------------------------------------------------if--------------------------------------------------------
 if(coursesAndDurationArray[0].monthDuration > 5){
@@ -262,11 +262,40 @@ if(coursesAndDurationArray[4].monthDuration > 5){
     console.log(`${coursesAndDurationArray[5].title} - super!`)
 }
 // ------------------------------------------------з ітерацією----------------------------------------------
+//---------------створення елементу document.createElement(tag) або текстовий вузол з текстом text - document.createTextNode(text)
+//--------------------------------------newElement. setAttribute('id','idName') або newElement. id = 'idName'
+let div_wrapper = document.createElement('div');
+div_wrapper.id = 'wrapper';
+document.body.append(div_wrapper);
+
+
 for(let y= 0; y < coursesAndDurationArray.length; y++) {
     if (coursesAndDurationArray[y].monthDuration > 5) {
-        console.log(`${coursesAndDurationArray[y].title} - super!`)
+        console.log(`${coursesAndDurationArray[y].title} - super!`);
+        let card = document.createElement('div');
+        card.className = 'card';
+        let h2 = document.createElement('h2');
+        h2.innerText = coursesAndDurationArray[y].title;
+        let p = document.createElement('p');
+        p.innerText = `${coursesAndDurationArray[y].monthDuration} місяців драйву :)`;
+        let button = document.createElement('button');
+        button.innerText = 'Хочу на курс!';
+        // -------------------------------------------вивести у документ document.body.append(div)--------------------------------------------
+        div_wrapper.append(card);
+        card.append(h2);
+        card.append(p);
+        card.append(button);
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
