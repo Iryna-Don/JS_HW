@@ -1,7 +1,8 @@
-body{
+body {
     margin: 0;
 }
-#wrapper{
+
+#wrapper {
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
@@ -9,7 +10,8 @@ body{
     flex-wrap: wrap;
 
 }
-.card{
+
+.card {
     margin: 20px;
     padding: 15px;
     display: flex;
@@ -20,25 +22,28 @@ body{
     background-color: lightskyblue;
     width: 25%;
 }
-.card:hover{
+
+.card:hover {
     background-color: greenyellow;
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
 }
-button{
+
+button {
     background-color: darkblue;
     color: white;
     font-size: 17px;
     border-radius: 10px;
 }
-button:hover{
+
+button:hover {
     color: black;
-    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
     background: #87cefa;
-    background: linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
-    background: -webkit-linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
-    background: -moz-linear-gradient(90deg,#87cefa 0%, #adff2f 80%);
+    background: linear-gradient(90deg, #87cefa 0%, #adff2f 80%);
+    background: -webkit-linear-gradient(90deg, #87cefa 0%, #adff2f 80%);
+    background: -moz-linear-gradient(90deg, #87cefa 0%, #adff2f 80%);
 }

@@ -1,9 +1,10 @@
 // Масиви та об'єкти:
 // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
-let arr = [3.14, 0, 'text', true, false, null, undefined, [], {}, function() {}];
+let arr = [3.14, 0, 'text', true, false, null, undefined, [], {}, function () {
+}];
 console.log(arr);
 // -----------------------------------------------якщо кожен окремо-------------------------------------------
-console.log(arr[0], arr[1], arr[2], arr[3], arr[4],arr[5],arr[6],arr[7],arr[8],arr[9]);
+console.log(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
 // --------------------------------------------------------ітерація масиву------------------------------------
 let i;
 for (i = 0; i < arr.length; i++) {
@@ -27,27 +28,27 @@ let book3 = {
 };
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.
 // ------------------------------------------------додавання до раніше створеного об'єкту----------------------------------------------------------
-book1.authors = [{name: 'Агата Крісті', age: '1890 - 1976'} ];
-book2.authors = [{name: 'Ілларіон Павлюк', age: 43} ];
-book3.authors = [{name: 'Карен Прайор', age: 91} ];
+book1.authors = [{name: 'Агата Крісті', age: '1890 - 1976'}];
+book2.authors = [{name: 'Ілларіон Павлюк', age: 43}];
+book3.authors = [{name: 'Карен Прайор', age: 91}];
 // ---------------------------------------------------створення нового об'єкту----------------------------------------------------------------------------
 let book4 = {
     title: 'Коли Ніцше плакав',
     pageCount: 464,
     genre: 'Психологія',
-    authors: [{name:'Ірвін Ялом', age: 92}],
+    authors: [{name: 'Ірвін Ялом', age: 92}],
 };
 let book5 = {
     title: '11/22/63',
     pageCount: 976,
     genre: 'Фантастика',
-    authors: [{name:'Стівен Кінг', age: 76}],
+    authors: [{name: 'Стівен Кінг', age: 76}],
 };
 let book6 = {
     title: 'Народження Сталевого Щура',
     pageCount: 288,
     genre: 'Фантастика',
-    authors: [{name:'Гаррі Гаррісон', age: 87}],
+    authors: [{name: 'Гаррі Гаррісон', age: 87}],
 };
 let books = [book1, book2, book3, book4, book5, book6];
 console.log(books);
@@ -75,8 +76,11 @@ for (index = 0; index < users.length; index++) {
 //     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3
 let x;
 x = 1;
-    if (x !== 0) {console.log('Вірно')}
-    else {console.log('Невірно')}
+if (x !== 0) {
+    console.log('Вірно')
+} else {
+    console.log('Невірно')
+}
 //     -----------------------------------------------------або (без перевірки, що це взагалі число)-------------------------------------------------
 // let xx = +prompt('Enter a number: ');
 // xx !== 0 ? console.log("Вірно") : console.log("Невірно");
@@ -109,16 +113,13 @@ x = 1;
 let day = 35;
 // ----------------------------------якщо через prompt (без перевірки введеного)-----------------------------------------------
 // let day = +prompt('Enter a number:')
-if(day >=1 && day <11){
+if (day >= 1 && day < 11) {
     console.log('Це перша декада місяця')
-}
-else if (day >=11 && day <21){
+} else if (day >= 11 && day < 21) {
     console.log('Це друга декада місяця')
-}
-else if (day >=21 && day <32){
+} else if (day >= 21 && day < 32) {
     console.log('Це третя декада місяця')
-}
-else{
+} else {
     console.log('Ви вийшли за межі місяця')
 }
 // --------------------------------------------------або-------------------------------------
@@ -140,26 +141,26 @@ let Monday = {
     third: 'Ma',
     fourth: 'DaZ',
 }
-let Tuesday  = {
+let Tuesday = {
     first: 'D',
     second: 'Eth',
     third: 'Sp',
     fourth: 'Sp',
 }
-let Wednesday  = {
+let Wednesday = {
     first: 'D',
     second: 'SU',
     third: 'Ma',
     fourth: 'D',
     fifth: 'G',
 }
-let Thursday  = {
+let Thursday = {
     first: 'DaZ',
     second: 'Mu',
     third: 'Ma',
     fourth: 'Ma',
 }
-let Friday  = {
+let Friday = {
     first: 'D',
     second: 'SU',
     third: 'Ma',
@@ -176,7 +177,7 @@ let Sunday = {
 // let planner = [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday ]
 // console.log(planner)
 
-switch (numberOfDayOfWeek){
+switch (numberOfDayOfWeek) {
     case 1:
         console.log(Monday);
         break;
@@ -193,14 +194,14 @@ switch (numberOfDayOfWeek){
         console.log(Friday);
         break;
     case 6:
-        if (Saturday.first === ''){
-        console.log('Today is Saturday')}
-        else (console.log(Saturday));
+        if (Saturday.first === '') {
+            console.log('Today is Saturday')
+        } else (console.log(Saturday));
         break;
     case 7:
-        if (Sunday.first === ''){
-        console.log('Today is Saturday')}
-    else (console.log(Sunday));
+        if (Sunday.first === '') {
+            console.log('Today is Saturday')
+        } else (console.log(Sunday));
         break;
     default:
         console.log('There are only 7 days in a week. Check your number');
@@ -213,21 +214,19 @@ switch (numberOfDayOfWeek){
 // let b = +prompt('Enter a number:')
 let a = 12;
 let b = 13;
-if(a>b){
+if (a > b) {
     console.log(`Найбільше з чисел ${a} та ${b} - ${a}`)
-}
-else if(a<b){
+} else if (a < b) {
     console.log(`Найбільше з чисел ${a} та ${b} - ${b}`)
-}
-else{console.log('Ці числа рівні')
+} else {
+    console.log('Ці числа рівні')
 }
 //     - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
 //         за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
 
 let xxx = 100500;
 if (
-    xxx === false || xxx === null || xxx === undefined || xxx === 0 || xxx === -0 || xxx === 0n || xxx === "")
-{
+    xxx === false || xxx === null || xxx === undefined || xxx === 0 || xxx === -0 || xxx === 0n || xxx === "") {
     xxx = "default";
 }
 console.log(xxx);
@@ -244,21 +243,22 @@ let coursesAndDurationArray = [
     {title: 'Frontend', monthDuration: 4},
 ]
 // ----------------------------------------------------if--------------------------------------------------------
-if(coursesAndDurationArray[0].monthDuration > 5){
+if (coursesAndDurationArray[0].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[0].title} - super!`)
 }
-if(coursesAndDurationArray[1].monthDuration > 5){
+if (coursesAndDurationArray[1].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[1].title} - super!`)
 }
-if(coursesAndDurationArray[2].monthDuration > 5){
+if (coursesAndDurationArray[2].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[2].title} - super!`)
 }
-if(coursesAndDurationArray[3].monthDuration > 5){
+if (coursesAndDurationArray[3].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[3].title} - super!`)
 }
-if(coursesAndDurationArray[4].monthDuration > 5){
+if (coursesAndDurationArray[4].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[4].title} - super!`)
-}if(coursesAndDurationArray[5].monthDuration > 5){
+}
+if (coursesAndDurationArray[5].monthDuration > 5) {
     console.log(`${coursesAndDurationArray[5].title} - super!`)
 }
 // ------------------------------------------------з ітерацією----------------------------------------------
@@ -269,7 +269,7 @@ div_wrapper.id = 'wrapper';
 document.body.append(div_wrapper);
 
 
-for(let y= 0; y < coursesAndDurationArray.length; y++) {
+for (let y = 0; y < coursesAndDurationArray.length; y++) {
     if (coursesAndDurationArray[y].monthDuration > 5) {
         console.log(`${coursesAndDurationArray[y].title} - super!`);
         let card = document.createElement('div');
