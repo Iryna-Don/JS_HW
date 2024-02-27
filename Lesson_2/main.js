@@ -132,76 +132,76 @@ if (day >= 1 && day < 11) {
 
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і
 // на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
-let numberOfDayOfWeek = 1;
+let numberOfDayOfWeek = 6;
 //----------------------------------------------------або-----------------------------------------
 //let numberOfDayOfWeek = +prompt('Вкажіть номер дня тижня');
-let Monday = {
+let monday = {
     first: 'D',
     second: 'SU',
     third: 'Ma',
     fourth: 'DaZ',
 }
-let Tuesday = {
+let tuesday = {
     first: 'D',
     second: 'Eth',
     third: 'Sp',
     fourth: 'Sp',
 }
-let Wednesday = {
+let wednesday = {
     first: 'D',
     second: 'SU',
     third: 'Ma',
     fourth: 'D',
     fifth: 'G',
 }
-let Thursday = {
+let thursday = {
     first: 'DaZ',
     second: 'Mu',
     third: 'Ma',
     fourth: 'Ma',
 }
-let Friday = {
+let friday = {
     first: 'D',
     second: 'SU',
     third: 'Ma',
     fourth: 'D',
 }
 // ----------------------------------------задля можливого планування дій на вихідні----------------------------
-let Saturday = {
+let saturday = {
     first: 'прогулянка у парку',
 }
-let Sunday = {
+let sunday = {
     first: 'басейн',
     second: 'заняття танцями',
 }
-// let planner = [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday ]
+// let planner = [monday, tuesday, wednesday, thursday, friday, saturday, sunday ]
 // console.log(planner)
 
 switch (numberOfDayOfWeek) {
     case 1:
-        console.log(Monday);
+        console.log(monday);
         break;
     case 2:
-        console.log(Tuesday);
+        console.log(tuesday);
         break;
     case 3:
-        console.log(Wednesday);
+        console.log(wednesday);
         break;
     case 4:
-        console.log(Thursday);
+        console.log(thursday);
         break;
     case 5:
-        console.log(Friday);
+        console.log(friday);
         break;
     case 6:
-        if (Saturday.first === '') {
+        if (saturday.first === '') {
             console.log('Today is Saturday')
-        } else (console.log(Saturday));
+        } else (console.log(saturday));
         break;
     case 7:
-        if (Sunday.first === '') {
-            console.log('Today is Saturday')
-        } else (console.log(Sunday));
+        if (sunday.first === '') {
+            console.log('Today is Sunday')
+        } else (console.log(sunday));
         break;
     default:
         console.log('There are only 7 days in a week. Check your number');
