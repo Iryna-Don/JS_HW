@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2vw;
+            background-color: black;
+        }
+
+        .post-card {
+            padding: 0.1vw;
+            height: 30vh;
+            text-align: center;
+            border-radius: 1vw;
+            border: 1px solid blue;
+            background-color: #fff;
+            box-shadow: 10px 10px 23px 0 rgba(0, 0, 255, 0.75);
+            -webkit-box-shadow: 10px 10px 23px 0 rgba(0, 0, 255, 0.75);
+            -moz-box-shadow: 10px 10px 23px 0 rgba(0, 0, 255, 0.75);
+            transition: 1.5s;
+        }
+
+        .post-card:hover {
+            background: #0000ff;
+            background: linear-gradient(90deg, #0000ff 0%, #000000 80%);
+            background: -webkit-linear-gradient(90deg, #0000ff 0%, #000000 80%);
+            background: -moz-linear-gradient(90deg, #0000ff 0%, #000000 80%);
+            color: white;
+            transition: 1.5s;
+        }
+    </style>
+</head>
+<body>
+<script src="main_add_4.js"></script>
+</body>
+</html>
