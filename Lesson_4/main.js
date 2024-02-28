@@ -203,7 +203,7 @@ let currencyValuesArray = [{currency: 'USD', value: 40}, {currency: 'EUR', value
 function exchange(sumUAH, currencyValues, exchangeCurrency) {
     for (let i = 0; i < currencyValues.length; i++) {
         if (currencyValues[i].currency === exchangeCurrency) {
-            let result = roundingToTenths(sumUAH / currencyValues[i].value);
+            let result = roundingToTenths(sumUAH / currencyValues[i].value) + ` ${exchangeCurrency}`;
             return console.log(result);
             //-----------------------------------------можливий запис-----------------------------------------
             // return console.log(roundingToTenths(sumUAH / currencyValues[i].value))
@@ -211,4 +211,4 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     }
 }
 
-exchange(10000, currencyValuesArray, 'PLN');
+exchange(10000, currencyValuesArray, 'GBP');
