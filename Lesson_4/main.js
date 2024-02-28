@@ -18,7 +18,13 @@ function areaOfARectangle(a, b) {
 }
 
 console.log(areaOfARectangle(5.217, 12.032));
-
+// ----------------------------------для усіх наступних результатів-----------------------
+// можливо декларувати та ініціалізувати змінну з отриманим результатом для подальшого використання
+// цієї змінної в розрахунках або інших функціях
+let resultAreaOfARectangle_1 = areaOfARectangle(5.217, 12.032);
+console.log(resultAreaOfARectangle_1);
+let resultAreaOfARectangle_2 = areaOfARectangle(6, 5);
+console.log(resultAreaOfARectangle_2);
 // -----------------------------------------or----------------------------------------------
 function areaOfARectangle1(a, b) {
     return roundingToTenthsMath(a * b);
