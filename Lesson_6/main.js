@@ -412,10 +412,15 @@ console.log(hasSass3);
 
 let hasDocker3 = [];
 for (let coursesArrayElement of coursesArray) {
-    let arrSass = (coursesArrayElement.modules.filter(value => value === 'docker'))
-    if (arrSass.includes('docker')) {
+    let arrDocker = (coursesArrayElement.modules.filter(value => value === 'docker'))
+    console.log(arrDocker)
+    if (arrDocker.includes('docker')) {
         hasDocker3.push(coursesArrayElement);
     }
 }
 console.log(hasDocker3);
-
+// =========================
+let hasSass4 = coursesArray.filter((coursesArrayElement)=>coursesArrayElement.modules.includes('sass'));
+console.log(hasSass4);
+let hasDocker4 = coursesArray.filter((coursesArrayElement)=>coursesArrayElement.modules.includes('docker'));
+console.log(hasDocker4);
