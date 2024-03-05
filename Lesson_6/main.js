@@ -245,7 +245,11 @@ console.log(diamondCards)
 
 // - всі трефи від 9 та більше
 let clubsCards = cardDeck.filter(value => value.suit === 'clubs' && value.point >= 9);
-console.log(clubsCards)
+console.log(clubsCards);
+// ============================
+let clubsCards1 = cardDeck.filter(value => value.suit === 'clubs' && (value.cardName === '9' || value.cardName === '10' || value.cardName === 'jack' || value.cardName === 'queen' || value.cardName === 'king' || value.cardName === 'ace'));
+console.log(clubsCards1)
+
 
 // {
 //     cardSuit: '', // 'spade'&#9824;, 'diamond' &#9830;,'heart'&#9829;, 'clubs'&#9827;
@@ -420,7 +424,7 @@ for (let coursesArrayElement of coursesArray) {
 }
 console.log(hasDocker3);
 // =========================
-let hasSass4 = coursesArray.filter((coursesArrayElement)=>coursesArrayElement.modules.includes('sass'));
+let hasSass4 = coursesArray.filter((coursesArrayElement) => coursesArrayElement.modules.includes('sass'));
 console.log(hasSass4);
-let hasDocker4 = coursesArray.filter((coursesArrayElement)=>coursesArrayElement.modules.includes('docker'));
+let hasDocker4 = coursesArray.filter((coursesArrayElement) => coursesArrayElement.modules.includes('docker'));
 console.log(hasDocker4);
