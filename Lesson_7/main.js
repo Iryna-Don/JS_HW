@@ -297,4 +297,50 @@ function arrayWithObjectsWriteToDocument(array) {
 }
 
 arrayWithObjectsWriteToDocument(listOfUsers);
+// =========================
+//     описати колоду карт (від 6 до туза без джокерів)
+let cards = [
+    {cardName: "6", point: 6},
+    {cardName: "7", point: 7},
+    {cardName: "8", point: 8},
+    {cardName: "9", point: 9},
+    {cardName: "10", point: 10},
+    {cardName: "jack", point: 11},
+    {cardName: "queen", point: 12},
+    {cardName: "king", point: 13},
+    {cardName: "ace", point: 14},
+];
+let cardSuits = [
+    'spade',
+    'diamond',
+    'heart',
+    'club',
+];
+
+let cardDeck = [];
+for (let cardSuit of cardSuits) {
+    for (let card of cards) {
+        if (cardSuit === 'spade' || cardSuit === 'club') {
+            cardDeck.push({...card, suit: cardSuit, color: 'black'});
+        }
+        if (cardSuit === 'diamond' || cardSuit === 'heart') {
+            cardDeck.push({...card, suit: cardSuit, color: 'red'});
+        }
+    }
+}
+console.log(cardDeck);
+
+//     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
+let suitDivide = cardDeck.reduce((result, value) => {
+    let{suit}=value;
+    result[suit].push(value);
+    return result;
+}, {
+    spade: [],
+    diamond: [],
+    heart: [],
+    club: []
+})
+console.log(suitDivide)
+// =========================
 

@@ -261,20 +261,22 @@ console.log(clubsCards1)
 //
 //     Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 let suitDivide = cardDeck.reduce((result, value) => {
-    if (value.suit === 'spade') {
-        result.spades.push(value)
-    } else if (value.suit === 'diamond') {
-        result.diamonds.push(value)
-    } else if (value.suit === 'heart') {
-        result.hearts.push(value)
-    } else {
-        result.clubs.push(value)
-    }
+    // if (value.suit === 'spade') {
+    //     result.spades.push(value)
+    // } else if (value.suit === 'diamond') {
+    //     result.diamonds.push(value)
+    // } else if (value.suit === 'heart') {
+    //     result.hearts.push(value)
+    // } else {
+    //     result.clubs.push(value)
+    // }
+    let{suit}=value;
+    result[suit].push(value);
     return result;
 }, {
-    spades: [],
-    diamonds: [],
-    hearts: [],
+    spade: [],
+    diamond: [],
+    heart: [],
     clubs: []
 })
 console.log(suitDivide)
