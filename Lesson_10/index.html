@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson_10</title>
+    <style>
+        #wrapper{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .cardJokes{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .question, .answer {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            width: 27vw;
+            height: 17vh;
+            border-radius: 15px;
+            text-align: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            transition: cubic-bezier(.2, .85, .4, 1);
+            box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        }
+        .question{
+            z-index: 1;
+            position: relative;
+            background-image: url('https://img.freepik.com/free-photo/faded-gray-background-with-paint-brush-texture_53876-102740.jpg?size=626&ext=jpg&ga=GA1.1.1120630260.1710274128&semt=ais');
+            border: 1px solid;
+            transition: transform 0.5s
+        }
+        .answer{
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            background-image: url("https://img.freepik.com/free-photo/monstera-nature-leaves-background-wallpaper_53876-103972.jpg?size=626&ext=jpg&ga=GA1.1.1120630260.1710274128&semt=ais");
+            transform: rotateY(-180deg);
+            transition: transform 1s;
+            color: white;
+        }
+        .cardJokes:hover .answer {
+            transform: rotateY(0deg);
+            z-index: 2;
+        }
+        .cardJokes:hover .question {
+            transform: rotateY(180deg);
+            z-index: -1;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<!--<form action="" id="formUserInfo" name="formUserInfo">-->
+<!--    <label for="userNameId"></label>-->
+<!--    <input type="text" name="userName" id="userNameId" placeholder="Enter your name">-->
+<!--    <br>-->
+<!--    <label for="userSurnameId"></label>-->
+<!--    <input type="text" name="userSurname" id="userSurnameId" placeholder="Enter your surname">-->
+<!--    <br>-->
+<!--    <label for="userAgeId"></label>-->
+<!--    <input type="number" name="userAge" id="userAgeId" placeholder="Enter your age">-->
+<!--    <br>-->
+<!--    <button type="submit" name="buttonSendUserInfo">Send info</button>-->
+<!--</form>-->
+<div id="textNumber">10</div>
+<script src="main.js"></script>
+</body>
+</html>
