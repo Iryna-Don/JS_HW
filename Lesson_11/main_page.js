@@ -37,7 +37,7 @@ function getInfo(limit, skip) {
     fetch(url)
         .then(res => res.json())
         .then(allCarts => {
-            cartsSection.innerHTML='';
+            cartsSection.innerHTML = '';
             let {carts} = allCarts;
             let {total: lengthOfList} = allCarts;
 
@@ -45,7 +45,6 @@ function getInfo(limit, skip) {
             skip < lengthOfList - limit ? next.disabled = false : next.disabled = true;
             skip <= 0 ? prev.disabled = true : prev.disabled = false;
             // ---------------------------------------------------------------------------------------------
-
 
 
             for (let {discountedTotal, id, total, totalProducts, totalQuantity, userId, products} of carts) {
@@ -128,6 +127,19 @@ function getInfo(limit, skip) {
         });
 
 }
+// дослідження структури body
+function explorer(htmlElement) {
+    let children = htmlElement.children;
+    console.log(htmlElement)
+    if (children.length !== 0) {
+        for (const child of children) {
+            explorer(child);
+        }
+    }
+}
+
+explorer(document.body);
+
 
 
 
