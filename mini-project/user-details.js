@@ -30,17 +30,19 @@ document.body.appendChild(buttonFlag);
 buttonNext.addEventListener('click', function () {
     slcFrom += qtyOfPosts;
     slcTo += qtyOfPosts;
-    wrapForUser.innerHTML = '';
-    wrapForPosts.innerHTML = '';
-    getInfoAboutUserAndPosts(slcFrom, slcTo);
+    clearPrev();
 })
 buttonPrev.addEventListener('click', function () {
     slcFrom -= qtyOfPosts;
     slcTo -= qtyOfPosts;
+    clearPrev();
+})
+
+function clearPrev() {
     wrapForUser.innerHTML = '';
     wrapForPosts.innerHTML = '';
     getInfoAboutUserAndPosts(slcFrom, slcTo);
-})
+}
 
 function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
     let linkID_url = location.search.substring(1);
@@ -102,7 +104,7 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
             for (const post of slicePosts) {
                 console.log(post);
                 let titlePostP = document.createElement('p');
-                let {id: postId, title, userId, body:postBody} = post;
+                let {id: postId, title, userId, body: postBody} = post;
                 titlePostP.innerText = title;
                 titlePostP.classList.add('postTitle');
                 divForPost.appendChild(titlePostP);
