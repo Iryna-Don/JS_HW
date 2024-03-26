@@ -109,21 +109,21 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
                 // });
             }
             // -----------------------------------Button For Posts------------------------------
-            if (buttonFlag.innerText === 'Hide All Posts') {
+            if (buttonFlag.innerText === 'Hide Posts') {
                 wrapForPosts.style.display = 'flex';
                 wrapForPosts.appendChild(divForButtonsPrevAndNext);
             } else {
-                let flag = 0;
+                let flag = false;
                 wrapForPosts.appendChild(divForButtonsPrevAndNext);
-                buttonFlag.innerText = 'Show All Posts';
+                buttonFlag.innerText = 'Show Posts';
                 buttonFlag.addEventListener('click', function () {
-                    if (flag === 0) {
-                        flag = 1;
-                        buttonFlag.innerText = 'Hide All Posts';
+                    if (flag === false) {
+                        flag = true;
+                        buttonFlag.innerText = 'Hide Posts';
                         wrapForPosts.style.display = 'flex';
                     } else {
-                        flag = 0;
-                        buttonFlag.innerText = 'Show All Posts';
+                        flag = false;
+                        buttonFlag.innerText = 'Show Posts';
                         wrapForPosts.style.display = 'none';
                     }
                 })
