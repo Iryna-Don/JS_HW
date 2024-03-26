@@ -57,41 +57,23 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
             let user = value[0];
             let posts = value[1];
             // --------------------------------------User-----------------------------------------
-            for (let infoKey in user) {
-                let obj1 = user[infoKey];
-                if (typeof obj1 !== 'object') {
-                    let infoElem1 = document.createElement('div');
-                    wrapForUser.appendChild(infoElem1);
-                    infoElem1.innerHTML = `<b>${infoKey}:</b> <i>${obj1}</i>`;
-                } else {
-                    let infoElem1 = document.createElement('div');
-                    wrapForUser.appendChild(infoElem1);
-                    infoElem1.innerHTML = `<b>${infoKey}:</b>`;
-                    //----------------------------2 рівень значень------------------------------
-                    for (let obj1Key in obj1) {
-                        let obj2 = obj1[obj1Key];
-                        if (typeof obj2 !== 'object') {
-                            let infoElem2 = document.createElement('ul');
-                            infoElem1.appendChild(infoElem2);
-                            infoElem2.innerHTML = `<b>${obj1Key}:</b> <i>${obj2}</i>`;
-                        } else {
-                            let infoElem2 = document.createElement('ul');
-                            infoElem1.appendChild(infoElem2);
-                            infoElem2.innerHTML = `<b>${obj1Key}:</b>`;
-                            //----------------------------3 рівень значень------------------------------
-                            for (let obj2Key in obj2) {
-                                let obj3 = obj2[obj2Key];
-                                if (typeof obj3 !== 'object') {
-                                    let infoElem3 = document.createElement('ul');
-                                    infoElem2.appendChild(infoElem3);
-                                    infoElem3.innerHTML = `<b>${obj2Key}:</b> <i>${obj3}</i>`;
-                                }
-                            }
-                        }
+            createFullUserInfo(user);
+            function createFullUserInfo(arr) {
+                for (let key in arr) {
+                    let obj = arr[key];
+                    if (typeof obj !== 'object') {
+                        let infoElem = document.createElement('div');
+                        wrapForUser.appendChild(infoElem);
+                        infoElem.innerHTML = `<b>${key}:</b> <i>${obj}</i>`;
+                    } else {
+                        let infoElem = document.createElement('div');
+                        wrapForUser.appendChild(infoElem);
+                        infoElem.innerHTML = `<b>${key}:</b>`;
+                        createFullUserInfo(obj);
                     }
                 }
             }
-            // ---------------------------Posts-------------------------------------------
+            // // ---------------------------Posts-------------------------------------------
             wrapForPosts.style.display = 'none';
             let divForPost = document.createElement('div');
             divForPost.classList.add('divForPost');
