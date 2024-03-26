@@ -58,6 +58,7 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
             let posts = value[1];
             // --------------------------------------User-----------------------------------------
             createFullUserInfo(user);
+
             function createFullUserInfo(arr) {
                 for (let key in arr) {
                     let obj = arr[key];
@@ -73,6 +74,7 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
                     }
                 }
             }
+
             // // ---------------------------Posts-------------------------------------------
             wrapForPosts.style.display = 'none';
             let divForPost = document.createElement('div');
@@ -98,7 +100,7 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
                     localStorage.setItem('postBody', postBody);
                     localStorage.setItem('userId', userId);
                 });
-                // -------------------------або за допомогою кнопки---------------------------------
+                // // -------------------------або за допомогою кнопки---------------------------------
                 // let btnComments = document.createElement('button');
                 // btnComments.classList.add('btnComments');
                 // titlePostP.appendChild(btnComments);
@@ -106,6 +108,10 @@ function getInfoAboutUserAndPosts(sliceFrom, sliceTo) {
                 // //     -------------------------------Waiting For A Click-------------------------
                 // btnComments.addEventListener('click', function () {
                 //     window.location.href = `post-details.html`;
+                // localStorage.setItem('postId', postId);
+                // localStorage.setItem('title', title);
+                // localStorage.setItem('postBody', postBody);
+                // localStorage.setItem('userId', userId);
                 // });
             }
             // -----------------------------------Button For Posts------------------------------
